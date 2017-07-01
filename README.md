@@ -7,4 +7,6 @@ lesson 1
 lesson 2
     learn to use outside modules
     
+lesson 3 
+    use superagent and cheerio to spider
     
