@@ -21,9 +21,17 @@ app.get('/', function (req, res, next) {
             var $element = $(element);
             items.push({
                 title: $element.attr('title'),
-                href: $element.attr('href'),
+                href: "https://cnodejs.org" + $element.attr('href'),
+                author: $('#topic_list .user_avatar img').eq(index).attr('title'),
+
             })
         })
+        /*$('#topic_list .user_avatar img').each(function (i,ele) {
+         var $element=$(ele);
+         items.push({
+         author:$element.attr('title')
+         })
+         })*/
         res.send(items);
     })
 })
