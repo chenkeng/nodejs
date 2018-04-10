@@ -86,7 +86,23 @@ stream2.end();  // 写完以后要结束
 stream2.on('finish',function(){
  console.log('以流的方式写入成功了')
 });
+// 流读取错误error事件
+stream1.on('error',function(){
+ console.log('流读取错误')
+})
 ```
+
+6. 管道 pipe
+// 从一个流将数据流入另外一个流（一定要是流才能用管道）
+```
+var fs=require('fs');
+var s1=fs.createReadStream('./data.txt');
+var s2=fs.createWriteStream('./data2.txt'); // data2 可以是不存在的文件
+s1.pipe(s2);   // 相当于将s1的文件复制到s2
+```
+
+
+
 
 
 
