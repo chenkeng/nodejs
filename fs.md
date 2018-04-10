@@ -41,7 +41,12 @@
 3. 文件删除
 ```
 var fs=require('fs');
-fs.unlink(fuction(err){
+fs.unlink('./01.txt',fuction(err){
+  if(err){
+   console.log(err)
+  }else{
+   console.log('删除成功');
+  }
   
 })
 ```
